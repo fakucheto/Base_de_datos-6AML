@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="node" attr.name="tipo" attr.type="string"/>
+<graph edgedefault="undirected"><node id="E:00064c">
+  <data key="d0">estudiante</data>
+</node>
+<node id="P:Ingeniería Industrial">
+  <data key="d0">programa</data>
+</node>
+<node id="Estrato 6">
+  <data key="d0">estrato</data>
+</node>
+<node id="E:0dfe51">
+  <data key="d0">estudiante</data>
+</node>
+<node id="P:Administración">
+  <data key="d0">programa</data>
+</node>
+<node id="Estrato 4">
+  <data key="d0">estrato</data>
+</node>
+<node id="E:15af31">
+  <data key="d0">estudiante</data>
+</node>
+<node id="P:Psicología">
+  <data key="d0">programa</data>
+</node>
+<node id="Estrato 1">
+  <data key="d0">estrato</data>
+</node>
+<node id="E:1fb4de">
+  <data key="d0">estudiante</data>
+</node>
+<node id="Estrato 2">
+  <data key="d0">estrato</data>
+</node>
+<node id="E:24f9e7">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:28a7e1">
+  <data key="d0">estudiante</data>
+</node>
+<node id="P:Ingeniería de Sistemas">
+  <data key="d0">programa</data>
+</node>
+<node id="E:309359">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:3b8857">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:400ff0">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:4d5585">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:547e76">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:54d508">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:56448c">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:57de1f">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:5eb412">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:62b202">
+  <data key="d0">estudiante</data>
+</node>
+<node id="Estrato 3">
+  <data key="d0">estrato</data>
+</node>
+<node id="E:6803ac">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:6ca91c">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:78efe7">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:8226a1">
+  <data key="d0">estudiante</data>
+</node>
+<node id="P:Contaduría">
+  <data key="d0">programa</data>
+</node>
+<node id="E:860aa9">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:8f12e9">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:90ecca">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:943c7d">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:9bf93c">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:acf16e">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:ae09cb">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:af244b">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:b4a385">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:b700fb">
+  <data key="d0">estudiante</data>
+</node>
+<node id="Estrato 5">
+  <data key="d0">estrato</data>
+</node>
+<node id="E:c76c57">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:e8311e">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:ec5df6">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:f4822f">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:fa6d28">
+  <data key="d0">estudiante</data>
+</node>
+<node id="E:fb688a">
+  <data key="d0">estudiante</data>
+</node>
+<edge source="E:00064c" target="P:Ingeniería Industrial"/>
+<edge source="E:00064c" target="Estrato 6"/>
+<edge source="P:Ingeniería Industrial" target="E:4d5585"/>
+<edge source="P:Ingeniería Industrial" target="E:5eb412"/>
+<edge source="P:Ingeniería Industrial" target="E:6803ac"/>
+<edge source="P:Ingeniería Industrial" target="E:6ca91c"/>
+<edge source="P:Ingeniería Industrial" target="E:8f12e9"/>
+<edge source="Estrato 6" target="E:24f9e7"/>
+<edge source="Estrato 6" target="E:28a7e1"/>
+<edge source="Estrato 6" target="E:3b8857"/>
+<edge source="Estrato 6" target="E:56448c"/>
+<edge source="Estrato 6" target="E:57de1f"/>
+<edge source="Estrato 6" target="E:5eb412"/>
+<edge source="Estrato 6" target="E:af244b"/>
+<edge source="Estrato 6" target="E:b4a385"/>
+<edge source="Estrato 6" target="E:c76c57"/>
+<edge source="E:0dfe51" target="P:Administración"/>
+<edge source="E:0dfe51" target="Estrato 4"/>
+<edge source="P:Administración" target="E:24f9e7"/>
+<edge source="P:Administración" target="E:309359"/>
+<edge source="P:Administración" target="E:400ff0"/>
+<edge source="P:Administración" target="E:56448c"/>
+<edge source="P:Administración" target="E:57de1f"/>
+<edge source="P:Administración" target="E:860aa9"/>
+<edge source="P:Administración" target="E:af244b"/>
+<edge source="P:Administración" target="E:e8311e"/>
+<edge source="P:Administración" target="E:fa6d28"/>
+<edge source="Estrato 4" target="E:309359"/>
+<edge source="Estrato 4" target="E:54d508"/>
+<edge source="Estrato 4" target="E:6803ac"/>
+<edge source="Estrato 4" target="E:acf16e"/>
+<edge source="Estrato 4" target="E:ae09cb"/>
+<edge source="Estrato 4" target="E:ec5df6"/>
+<edge source="Estrato 4" target="E:f4822f"/>
+<edge source="E:15af31" target="P:Psicología"/>
+<edge source="E:15af31" target="Estrato 1"/>
+<edge source="P:Psicología" target="E:1fb4de"/>
+<edge source="P:Psicología" target="E:54d508"/>
+<edge source="P:Psicología" target="E:62b202"/>
+<edge source="P:Psicología" target="E:78efe7"/>
+<edge source="P:Psicología" target="E:9bf93c"/>
+<edge source="P:Psicología" target="E:ae09cb"/>
+<edge source="P:Psicología" target="E:c76c57"/>
+<edge source="P:Psicología" target="E:ec5df6"/>
+<edge source="Estrato 1" target="E:400ff0"/>
+<edge source="Estrato 1" target="E:547e76"/>
+<edge source="Estrato 1" target="E:6ca91c"/>
+<edge source="Estrato 1" target="E:78efe7"/>
+<edge source="Estrato 1" target="E:8f12e9"/>
+<edge source="Estrato 1" target="E:90ecca"/>
+<edge source="Estrato 1" target="E:943c7d"/>
+<edge source="Estrato 1" target="E:9bf93c"/>
+<edge source="E:1fb4de" target="Estrato 2"/>
+<edge source="Estrato 2" target="E:4d5585"/>
+<edge source="Estrato 2" target="E:860aa9"/>
+<edge source="Estrato 2" target="E:fb688a"/>
+<edge source="E:28a7e1" target="P:Ingeniería de Sistemas"/>
+<edge source="P:Ingeniería de Sistemas" target="E:3b8857"/>
+<edge source="P:Ingeniería de Sistemas" target="E:547e76"/>
+<edge source="P:Ingeniería de Sistemas" target="E:90ecca"/>
+<edge source="P:Ingeniería de Sistemas" target="E:943c7d"/>
+<edge source="P:Ingeniería de Sistemas" target="E:b4a385"/>
+<edge source="P:Ingeniería de Sistemas" target="E:fb688a"/>
+<edge source="E:62b202" target="Estrato 3"/>
+<edge source="Estrato 3" target="E:8226a1"/>
+<edge source="E:8226a1" target="P:Contaduría"/>
+<edge source="P:Contaduría" target="E:acf16e"/>
+<edge source="P:Contaduría" target="E:b700fb"/>
+<edge source="P:Contaduría" target="E:f4822f"/>
+<edge source="E:b700fb" target="Estrato 5"/>
+<edge source="Estrato 5" target="E:e8311e"/>
+<edge source="Estrato 5" target="E:fa6d28"/>
+<edge source="Estrato 5" target="E:fb688a"/>
+</graph></graphml>
