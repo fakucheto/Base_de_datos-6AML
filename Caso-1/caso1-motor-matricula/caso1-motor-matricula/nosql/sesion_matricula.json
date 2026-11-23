@@ -1,0 +1,60 @@
+[
+  {
+    "_id": "EST_001",
+    "estudiante_id": "EST_001",
+    "nombre": "Andres Diaz",
+    "programa": "Ingeniería de Sistemas",
+    "periodo": "2026-2",
+    "max_creditos_permitidos": 20,
+    "creditos_seleccionados": 4,
+    "estado_sesion": "EN_PROCESO",
+    "horario_borrador": [
+      {
+        "id_seccion": "SEC_MAT2_01",
+        "creditos": 4,
+        "dia_semana": "MAR",
+        "hora": "10:00-12:00"
+      }
+    ]
+  },
+  {
+    "_id": "EST_002",
+    "estudiante_id": "EST_002",
+    "nombre": "Juan Gutierrez",
+    "programa": "Ingeniería de Sistemas",
+    "periodo": "2026-2",
+    "max_creditos_permitidos": 20,
+    "creditos_seleccionados": 4,
+    "estado_sesion": "EN_PROCESO",
+    "horario_borrador": [
+      {
+        "id_seccion": "SEC_MAT1_01",
+        "creditos": 4,
+        "dia_semana": "LUN",
+        "hora": "08:00-10:00"
+      }
+    ]
+  },
+  {
+    "_id": "EST_003",
+    "estudiante_id": "EST_003",
+    "nombre": "Johan Quiroga",
+    "programa": "Ingeniería de Sistemas",
+    "periodo": "2026-2",
+    "max_creditos_permitidos": 20,
+    "creditos_seleccionados": 0,
+    "estado_sesion": "EN_PROCESO",
+    "horario_borrador": []
+  },
+  {
+    "_id": "EST_004",
+    "estudiante_id": "EST_004",
+    "nombre": "Carlos Perez",
+    "programa": "Ingeniería de Sistemas",
+    "periodo": "2026-2",
+    "max_creditos_permitidos": 20,
+    "creditos_seleccionados": 0,
+    "estado_sesion": "EN_PROCESO",
+    "horario_borrador": []
+  }
+]
