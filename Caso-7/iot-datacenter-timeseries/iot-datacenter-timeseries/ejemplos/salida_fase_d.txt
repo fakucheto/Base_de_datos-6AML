@@ -1,0 +1,73 @@
+[+] Entorno inicializado limpiamente.
+
+--- [FASE D] 1. PRUEBAS DE INTEGRIDAD Y CASOS LÍMITE ---
+[ÉXITO] Inserción normal aceptada.
+[ÉXITO] Fecha extrema (timestamp negativo/histórico) aceptada por el esquema numérico.
+[ÉXITO] Duplicado rechazado correctamente por Primary Key: UNIQUE constraint failed: lectura_telemetria.id_sensor, lectura_telemetria.timestamp_lectura
+[ÉXITO] Referencia inválida de sensor rechazada por Foreign Key: FOREIGN KEY constraint failed
+
+--- [FASE D] 2. PRUEBAS DE CONCURRENCIA MULTISESIÓN ---
+[CONCURRENCIA] Sesion_Colector_B finalizó su lote con éxito.
+[CONCURRENCIA] Sesion_Colector_A finalizó su lote con éxito.
+[ÉXITO] Ambas sesiones concluyeron sin bloqueos fatales (Deadlocks) gracias al diseño Append-Only.
+
+--- [FASE D] 3. RENDIMIENTO Y PLAN DE EJECUCIÓN (EXPLAIN) ---
+[PLAN EXPLAIN] (3, 0, 0, 'SEARCH lectura_telemetria USING INDEX sqlite_autoindex_lectura_telemetria_1 (id_sensor=? AND timestamp_lectura>?)')
+
+--- [FASE D] 4. EJEMPLOS DE LOS 7 TIPOS DE JOIN ---
+  SQLite versión 3.45.1 | RIGHT/FULL JOIN nativos: True
+
+  >> 1. INNER JOIN
+     Caso de uso: Lecturas que superan el umbral del sensor (alarmas a emitir)
+     Columnas: ['id_sensor', 'rack_ubicacion', 'timestamp_lectura', 'valor_metrica', 'umbral_limite']
+     ('SEN_02', 'Rack_A2', 1700000005, 85.0, 80.0)
+     ('SEN_01', 'Rack_A1', 1700000005, 29.5, 28.0)
+
+  >> 2. LEFT JOIN
+     Caso de uso: Cantidad de lecturas por sensor; 0 = sensor mudo/en mantenimiento
+     Columnas: ['id_sensor', 'estado_operativo', 'total_lecturas']
+     ('SEN_01', 'ACTIVO', 5)
+     ('SEN_02', 'ACTIVO', 101)
+     ('SEN_03', 'MANTENIMIENTO', 0)
+     ('SEN_04', 'ACTIVO', 0)
+
+  >> 3. RIGHT JOIN
+     Caso de uso: Racks por pasillo; Rack_C1 aparece sin sensor (cobertura faltante)
+     Columnas: ['pasillo', 'rack_ubicacion', 'id_sensor', 'tipo_metrica']
+     ('Pasillo_Caliente_2', 'Rack_C1', None, None)
+     ('Pasillo_Frio_1', 'Rack_A1', 'SEN_01', 'TEMPERATURA')
+     ('Pasillo_Frio_1', 'Rack_A1', 'SEN_03', 'CONSUMO_KW')
+     ('Pasillo_Frio_1', 'Rack_A2', 'SEN_02', 'HUMEDAD')
+
+  >> 4. FULL JOIN
+     Caso de uso: Auditoría: SEN_04 (Rack_Z9) sin pasillo y Rack_C1 sin sensor
+     Columnas: ['id_sensor', 'rack_sensor', 'rack_mapa', 'pasillo']
+     (None, None, 'Rack_C1', 'Pasillo_Caliente_2')
+     ('SEN_01', 'Rack_A1', 'Rack_A1', 'Pasillo_Frio_1')
+     ('SEN_02', 'Rack_A2', 'Rack_A2', 'Pasillo_Frio_1')
+     ('SEN_03', 'Rack_A1', 'Rack_A1', 'Pasillo_Frio_1')
+     ('SEN_04', 'Rack_Z9', None, None)
+
+  >> 5. CROSS JOIN
+     Caso de uso: Matriz de notificaciones: cada sensor activo contra cada nivel de alerta
+     Columnas: ['id_sensor', 'nivel_alerta', 'canal_notificacion']
+     ('SEN_01', 'CRITICO', 'Panel NOC + SMS')
+     ('SEN_01', 'PRECAUCION', 'Panel NOC')
+     ('SEN_02', 'CRITICO', 'Panel NOC + SMS')
+     ('SEN_02', 'PRECAUCION', 'Panel NOC')
+     ('SEN_04', 'CRITICO', 'Panel NOC + SMS')
+     ('SEN_04', 'PRECAUCION', 'Panel NOC')
+
+  >> 6. SELF JOIN
+     Caso de uso: Pares de sensores en el mismo rack (correlación de métricas)
+     Columnas: ['sensor_1', 'metrica_1', 'sensor_2', 'metrica_2', 'rack_ubicacion']
+     ('SEN_01', 'TEMPERATURA', 'SEN_03', 'CONSUMO_KW', 'Rack_A1')
+
+  >> 7. NATURAL JOIN
+     Caso de uso: Lecturas con datos del sensor, unido automáticamente por id_sensor
+     Columnas: ['id_sensor', 'rack_ubicacion', 'timestamp_lectura', 'valor_metrica', 'nivel_alerta']
+     ('SEN_01', 'Rack_A1', -1, 22.0, 'NORMAL')
+     ('SEN_01', 'Rack_A1', 1700000000, 24.5, 'NORMAL')
+     ('SEN_01', 'Rack_A1', 1700000003, 26.0, 'NORMAL')
+     ('SEN_01', 'Rack_A1', 1700000005, 29.5, 'CRITICO')
+     ('SEN_01', 'Rack_A1', 1700000010, 27.0, 'PRECAUCION')

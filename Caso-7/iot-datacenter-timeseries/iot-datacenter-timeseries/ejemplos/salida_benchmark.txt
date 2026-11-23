@@ -1,0 +1,9 @@
+Preparando 500 sensores con las reglas de negocio activas...
+[+] Entorno inicializado limpiamente.
+
+RNF1 - Ingesta: 10000 lecturas en 0.15 s = 4,060,720 métricas/minuto (objetivo: 10,000) -> CUMPLE
+           Alarmas generadas durante la carga: 4832
+RNF2 - Latencia de alerta (lectura crítica -> alarma e incidencia confirmadas), 300 muestras:
+           mediana 1.98 ms | p95 2.43 ms | máximo 3.00 ms (objetivo: < 2000 ms) -> CUMPLE
+
+Nota: medición del prototipo en SQLite, de un solo proceso y sin red; no sustituye una prueba de carga del sistema completo con ingesta MQTT/HTTP.

@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d4" for="edge" attr.name="rel" attr.type="string"/>
+<key id="d3" for="node" attr.name="severidad" attr.type="string"/>
+<key id="d2" for="node" attr.name="estado" attr.type="string"/>
+<key id="d1" for="node" attr.name="metrica" attr.type="string"/>
+<key id="d0" for="node" attr.name="tipo" attr.type="string"/>
+<graph edgedefault="directed"><node id="DC_Principal">
+  <data key="d0">Datacenter</data>
+</node>
+<node id="Pasillo_Frio_1">
+  <data key="d0">Pasillo</data>
+</node>
+<node id="Rack_A1">
+  <data key="d0">Rack</data>
+</node>
+<node id="Rack_A2">
+  <data key="d0">Rack</data>
+</node>
+<node id="Pasillo_Caliente_2">
+  <data key="d0">Pasillo</data>
+</node>
+<node id="Rack_C1">
+  <data key="d0">Rack</data>
+</node>
+<node id="SEN_01">
+  <data key="d0">Sensor</data>
+  <data key="d1">TEMPERATURA</data>
+  <data key="d2">ACTIVO</data>
+</node>
+<node id="SEN_02">
+  <data key="d0">Sensor</data>
+  <data key="d1">HUMEDAD</data>
+  <data key="d2">ACTIVO</data>
+</node>
+<node id="SEN_03">
+  <data key="d0">Sensor</data>
+  <data key="d1">CONSUMO_KW</data>
+  <data key="d2">MANTENIMIENTO</data>
+</node>
+<node id="SIN_PASILLO">
+  <data key="d0">Pasillo</data>
+</node>
+<node id="Rack_Z9">
+  <data key="d0">Rack</data>
+</node>
+<node id="SEN_04">
+  <data key="d0">Sensor</data>
+  <data key="d1">TEMPERATURA</data>
+  <data key="d2">ACTIVO</data>
+</node>
+<node id="SEN_05">
+  <data key="d0">Sensor</data>
+  <data key="d1">TEMPERATURA</data>
+  <data key="d2">ACTIVO</data>
+</node>
+<node id="SEN_06">
+  <data key="d0">Sensor</data>
+  <data key="d1">CONSUMO_KW</data>
+  <data key="d2">ACTIVO</data>
+</node>
+<node id="SEN_07">
+  <data key="d0">Sensor</data>
+  <data key="d1">CONSUMO_KW</data>
+  <data key="d2">ACTIVO</data>
+</node>
+<node id="ALM_1">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_2">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_3">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_4">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_5">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_6">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_7">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_8">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_9">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_10">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_11">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_12">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_13">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_14">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_15">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_16">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_17">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_18">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_19">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_20">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_21">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_22">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_23">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_24">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_25">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_26">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_27">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_28">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_29">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_30">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_31">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_32">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_33">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_34">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_35">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_36">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_37">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_38">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_39">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_40">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_41">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_42">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_43">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_44">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_45">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_46">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_47">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_48">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_49">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_50">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_51">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_52">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_53">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_54">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_55">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_56">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_57">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_58">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_59">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_60">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_61">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_62">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_63">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_64">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_65">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_66">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_67">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_68">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_69">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<node id="ALM_70">
+  <data key="d0">Alarma</data>
+  <data key="d3">PRECAUCION</data>
+</node>
+<node id="ALM_71">
+  <data key="d0">Alarma</data>
+  <data key="d3">CRITICO</data>
+</node>
+<edge source="DC_Principal" target="Pasillo_Frio_1">
+  <data key="d4">CONTIENE</data>
+</edge>
+<edge source="DC_Principal" target="Pasillo_Caliente_2">
+  <data key="d4">CONTIENE</data>
+</edge>
+<edge source="DC_Principal" target="SIN_PASILLO">
+  <data key="d4">CONTIENE</data>
+</edge>
+<edge source="Pasillo_Frio_1" target="Rack_A1">
+  <data key="d4">CONTIENE</data>
+</edge>
+<edge source="Pasillo_Frio_1" target="Rack_A2">
+  <data key="d4">CONTIENE</data>
+</edge>
+<edge source="Rack_A1" target="SEN_01">
+  <data key="d4">TIENE_SENSOR</data>
+</edge>
+<edge source="Rack_A1" target="SEN_03">
+  <data key="d4">TIENE_SENSOR</data>
+</edge>
+<edge source="Rack_A1" target="SEN_07">
+  <data key="d4">TIENE_SENSOR</data>
+</edge>
+<edge source="Rack_A2" target="SEN_02">
+  <data key="d4">TIENE_SENSOR</data>
+</edge>
+<edge source="Rack_A2" target="SEN_05">
+  <data key="d4">TIENE_SENSOR</data>
+</edge>
+<edge source="Rack_A2" target="SEN_06">
+  <data key="d4">TIENE_SENSOR</data>
+</edge>
+<edge source="Pasillo_Caliente_2" target="Rack_C1">
+  <data key="d4">CONTIENE</data>
+</edge>
+<edge source="SEN_01" target="ALM_1">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_2">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_3">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_4">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_5">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_6">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_7">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_8">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_9">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_10">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_11">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_12">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_13">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_14">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_15">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_16">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_17">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_18">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_70">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_01" target="ALM_71">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_02" target="ALM_19">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_02" target="ALM_20">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_02" target="ALM_21">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SIN_PASILLO" target="Rack_Z9">
+  <data key="d4">CONTIENE</data>
+</edge>
+<edge source="Rack_Z9" target="SEN_04">
+  <data key="d4">TIENE_SENSOR</data>
+</edge>
+<edge source="SEN_04" target="ALM_22">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_23">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_24">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_25">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_26">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_27">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_28">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_29">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_30">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_31">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_32">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_33">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_34">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_35">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_36">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_37">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_38">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_04" target="ALM_39">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_40">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_41">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_42">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_43">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_44">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_45">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_46">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_47">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_48">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_49">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_50">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_51">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_52">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_53">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_54">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_05" target="ALM_55">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_56">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_57">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_58">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_59">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_60">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_61">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_62">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_63">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_64">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_65">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_66">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_67">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_68">
+  <data key="d4">GENERO</data>
+</edge>
+<edge source="SEN_07" target="ALM_69">
+  <data key="d4">GENERO</data>
+</edge>
+</graph></graphml>

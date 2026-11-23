@@ -1,0 +1,1200 @@
+{
+  "sensores": [
+    {
+      "_id": "SEN_01",
+      "tipo_metrica": "TEMPERATURA",
+      "umbral": 28.0,
+      "estado": "ACTIVO",
+      "ubicacion": {
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1"
+      },
+      "ultimas_lecturas": [
+        {
+          "ts": 1700099999,
+          "valor": 31.5,
+          "nivel": "CRITICO"
+        },
+        {
+          "ts": 1700010500,
+          "valor": 25.4,
+          "nivel": "PRECAUCION"
+        },
+        {
+          "ts": 1700010200,
+          "valor": 24.0,
+          "nivel": "NORMAL"
+        }
+      ],
+      "estadisticas": {
+        "n": 38,
+        "promedio": 24.92,
+        "max": 31.5
+      }
+    },
+    {
+      "_id": "SEN_02",
+      "tipo_metrica": "HUMEDAD",
+      "umbral": 80.0,
+      "estado": "ACTIVO",
+      "ubicacion": {
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1"
+      },
+      "ultimas_lecturas": [
+        {
+          "ts": 1700010500,
+          "valor": 73.3,
+          "nivel": "PRECAUCION"
+        },
+        {
+          "ts": 1700010200,
+          "valor": 51.3,
+          "nivel": "NORMAL"
+        },
+        {
+          "ts": 1700009900,
+          "valor": 53.0,
+          "nivel": "NORMAL"
+        }
+      ],
+      "estadisticas": {
+        "n": 36,
+        "promedio": 59.02,
+        "max": 74.7
+      }
+    },
+    {
+      "_id": "SEN_03",
+      "tipo_metrica": "CONSUMO_KW",
+      "umbral": 15.0,
+      "estado": "MANTENIMIENTO",
+      "ubicacion": {
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1"
+      },
+      "ultimas_lecturas": [],
+      "estadisticas": {
+        "n": 0,
+        "promedio": null,
+        "max": null
+      }
+    },
+    {
+      "_id": "SEN_04",
+      "tipo_metrica": "TEMPERATURA",
+      "umbral": 30.0,
+      "estado": "ACTIVO",
+      "ubicacion": {
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO"
+      },
+      "ultimas_lecturas": [
+        {
+          "ts": 1700010500,
+          "valor": 26.5,
+          "nivel": "NORMAL"
+        },
+        {
+          "ts": 1700010200,
+          "valor": 23.9,
+          "nivel": "NORMAL"
+        },
+        {
+          "ts": 1700009900,
+          "valor": 28.1,
+          "nivel": "PRECAUCION"
+        }
+      ],
+      "estadisticas": {
+        "n": 36,
+        "promedio": 26.98,
+        "max": 31.0
+      }
+    },
+    {
+      "_id": "SEN_05",
+      "tipo_metrica": "TEMPERATURA",
+      "umbral": 30.0,
+      "estado": "ACTIVO",
+      "ubicacion": {
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1"
+      },
+      "ultimas_lecturas": [
+        {
+          "ts": 1700010500,
+          "valor": 29.7,
+          "nivel": "PRECAUCION"
+        },
+        {
+          "ts": 1700010200,
+          "valor": 23.7,
+          "nivel": "NORMAL"
+        },
+        {
+          "ts": 1700009900,
+          "valor": 26.5,
+          "nivel": "NORMAL"
+        }
+      ],
+      "estadisticas": {
+        "n": 36,
+        "promedio": 26.27,
+        "max": 30.5
+      }
+    },
+    {
+      "_id": "SEN_06",
+      "tipo_metrica": "CONSUMO_KW",
+      "umbral": 15.0,
+      "estado": "ACTIVO",
+      "ubicacion": {
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1"
+      },
+      "ultimas_lecturas": [
+        {
+          "ts": 1700010500,
+          "valor": 9.8,
+          "nivel": "NORMAL"
+        },
+        {
+          "ts": 1700010200,
+          "valor": 9.5,
+          "nivel": "NORMAL"
+        },
+        {
+          "ts": 1700009900,
+          "valor": 9.6,
+          "nivel": "NORMAL"
+        }
+      ],
+      "estadisticas": {
+        "n": 36,
+        "promedio": 9.65,
+        "max": 13.0
+      }
+    },
+    {
+      "_id": "SEN_07",
+      "tipo_metrica": "CONSUMO_KW",
+      "umbral": 15.0,
+      "estado": "ACTIVO",
+      "ubicacion": {
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1"
+      },
+      "ultimas_lecturas": [
+        {
+          "ts": 1700010500,
+          "valor": 16.0,
+          "nivel": "CRITICO"
+        },
+        {
+          "ts": 1700010200,
+          "valor": 15.7,
+          "nivel": "CRITICO"
+        },
+        {
+          "ts": 1700009900,
+          "valor": 11.4,
+          "nivel": "NORMAL"
+        }
+      ],
+      "estadisticas": {
+        "n": 36,
+        "promedio": 12.43,
+        "max": 16.0
+      }
+    }
+  ],
+  "alarmas": [
+    {
+      "_id": 1,
+      "severidad": "PRECAUCION",
+      "valor": 26.1,
+      "timestamp": 1700000000,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 2,
+      "severidad": "PRECAUCION",
+      "valor": 26.9,
+      "timestamp": 1700001200,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 3,
+      "severidad": "PRECAUCION",
+      "valor": 26.4,
+      "timestamp": 1700001500,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 4,
+      "severidad": "CRITICO",
+      "valor": 28.1,
+      "timestamp": 1700001800,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "CERRADA",
+        "responsable": "ing.noc.1"
+      }
+    },
+    {
+      "_id": 5,
+      "severidad": "PRECAUCION",
+      "valor": 26.2,
+      "timestamp": 1700004200,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 6,
+      "severidad": "PRECAUCION",
+      "valor": 25.4,
+      "timestamp": 1700004500,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 7,
+      "severidad": "PRECAUCION",
+      "valor": 25.7,
+      "timestamp": 1700005100,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 8,
+      "severidad": "PRECAUCION",
+      "valor": 27.5,
+      "timestamp": 1700005400,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 9,
+      "severidad": "PRECAUCION",
+      "valor": 27.4,
+      "timestamp": 1700006000,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 10,
+      "severidad": "PRECAUCION",
+      "valor": 26.6,
+      "timestamp": 1700006300,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 11,
+      "severidad": "CRITICO",
+      "valor": 28.7,
+      "timestamp": 1700007200,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 12,
+      "severidad": "PRECAUCION",
+      "valor": 27.8,
+      "timestamp": 1700008400,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 13,
+      "severidad": "PRECAUCION",
+      "valor": 25.8,
+      "timestamp": 1700008700,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 14,
+      "severidad": "PRECAUCION",
+      "valor": 27.5,
+      "timestamp": 1700009000,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 15,
+      "severidad": "PRECAUCION",
+      "valor": 26.8,
+      "timestamp": 1700009300,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 16,
+      "severidad": "PRECAUCION",
+      "valor": 25.3,
+      "timestamp": 1700009600,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 17,
+      "severidad": "CRITICO",
+      "valor": 28.8,
+      "timestamp": 1700009900,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 18,
+      "severidad": "PRECAUCION",
+      "valor": 25.4,
+      "timestamp": 1700010500,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 19,
+      "severidad": "PRECAUCION",
+      "valor": 73.1,
+      "timestamp": 1700005100,
+      "sensor": {
+        "id": "SEN_02",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "HUMEDAD"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 20,
+      "severidad": "PRECAUCION",
+      "valor": 74.7,
+      "timestamp": 1700007200,
+      "sensor": {
+        "id": "SEN_02",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "HUMEDAD"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 21,
+      "severidad": "PRECAUCION",
+      "valor": 73.3,
+      "timestamp": 1700010500,
+      "sensor": {
+        "id": "SEN_02",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "HUMEDAD"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 22,
+      "severidad": "PRECAUCION",
+      "valor": 30.0,
+      "timestamp": 1700000000,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 23,
+      "severidad": "PRECAUCION",
+      "valor": 28.2,
+      "timestamp": 1700000600,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 24,
+      "severidad": "CRITICO",
+      "valor": 30.3,
+      "timestamp": 1700001200,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 25,
+      "severidad": "PRECAUCION",
+      "valor": 27.5,
+      "timestamp": 1700002400,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 26,
+      "severidad": "PRECAUCION",
+      "valor": 27.7,
+      "timestamp": 1700003000,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 27,
+      "severidad": "CRITICO",
+      "valor": 30.2,
+      "timestamp": 1700003300,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 28,
+      "severidad": "CRITICO",
+      "valor": 31.0,
+      "timestamp": 1700004200,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 29,
+      "severidad": "PRECAUCION",
+      "valor": 27.1,
+      "timestamp": 1700004500,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 30,
+      "severidad": "PRECAUCION",
+      "valor": 28.0,
+      "timestamp": 1700005700,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 31,
+      "severidad": "PRECAUCION",
+      "valor": 29.3,
+      "timestamp": 1700006000,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 32,
+      "severidad": "CRITICO",
+      "valor": 31.0,
+      "timestamp": 1700007200,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 33,
+      "severidad": "PRECAUCION",
+      "valor": 27.2,
+      "timestamp": 1700007500,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 34,
+      "severidad": "CRITICO",
+      "valor": 30.8,
+      "timestamp": 1700007800,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 35,
+      "severidad": "PRECAUCION",
+      "valor": 29.9,
+      "timestamp": 1700008100,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 36,
+      "severidad": "PRECAUCION",
+      "valor": 28.8,
+      "timestamp": 1700008700,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 37,
+      "severidad": "PRECAUCION",
+      "valor": 28.5,
+      "timestamp": 1700009000,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 38,
+      "severidad": "PRECAUCION",
+      "valor": 27.3,
+      "timestamp": 1700009300,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 39,
+      "severidad": "PRECAUCION",
+      "valor": 28.1,
+      "timestamp": 1700009900,
+      "sensor": {
+        "id": "SEN_04",
+        "rack": "Rack_Z9",
+        "pasillo": "SIN_PASILLO",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 40,
+      "severidad": "CRITICO",
+      "valor": 30.5,
+      "timestamp": 1700000300,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 41,
+      "severidad": "PRECAUCION",
+      "valor": 29.8,
+      "timestamp": 1700000600,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 42,
+      "severidad": "CRITICO",
+      "valor": 30.1,
+      "timestamp": 1700001800,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 43,
+      "severidad": "PRECAUCION",
+      "valor": 29.7,
+      "timestamp": 1700002100,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 44,
+      "severidad": "PRECAUCION",
+      "valor": 27.4,
+      "timestamp": 1700002700,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 45,
+      "severidad": "PRECAUCION",
+      "valor": 27.1,
+      "timestamp": 1700003000,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 46,
+      "severidad": "PRECAUCION",
+      "valor": 28.6,
+      "timestamp": 1700003600,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 47,
+      "severidad": "PRECAUCION",
+      "valor": 28.8,
+      "timestamp": 1700004200,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 48,
+      "severidad": "CRITICO",
+      "valor": 30.3,
+      "timestamp": 1700005700,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 49,
+      "severidad": "PRECAUCION",
+      "valor": 29.8,
+      "timestamp": 1700006000,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 50,
+      "severidad": "PRECAUCION",
+      "valor": 29.3,
+      "timestamp": 1700006300,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 51,
+      "severidad": "PRECAUCION",
+      "valor": 29.8,
+      "timestamp": 1700007200,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 52,
+      "severidad": "CRITICO",
+      "valor": 30.5,
+      "timestamp": 1700007500,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 53,
+      "severidad": "PRECAUCION",
+      "valor": 28.6,
+      "timestamp": 1700008700,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 54,
+      "severidad": "PRECAUCION",
+      "valor": 28.7,
+      "timestamp": 1700009000,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 55,
+      "severidad": "PRECAUCION",
+      "valor": 29.7,
+      "timestamp": 1700010500,
+      "sensor": {
+        "id": "SEN_05",
+        "rack": "Rack_A2",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 56,
+      "severidad": "PRECAUCION",
+      "valor": 13.8,
+      "timestamp": 1700000000,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 57,
+      "severidad": "CRITICO",
+      "valor": 15.9,
+      "timestamp": 1700000600,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 58,
+      "severidad": "PRECAUCION",
+      "valor": 14.9,
+      "timestamp": 1700001800,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 59,
+      "severidad": "CRITICO",
+      "valor": 15.4,
+      "timestamp": 1700003900,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 60,
+      "severidad": "PRECAUCION",
+      "valor": 14.9,
+      "timestamp": 1700004500,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 61,
+      "severidad": "CRITICO",
+      "valor": 16.0,
+      "timestamp": 1700005400,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 62,
+      "severidad": "PRECAUCION",
+      "valor": 14.7,
+      "timestamp": 1700005700,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 63,
+      "severidad": "CRITICO",
+      "valor": 15.8,
+      "timestamp": 1700006000,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 64,
+      "severidad": "CRITICO",
+      "valor": 15.4,
+      "timestamp": 1700006300,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 65,
+      "severidad": "PRECAUCION",
+      "valor": 14.8,
+      "timestamp": 1700006600,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 66,
+      "severidad": "CRITICO",
+      "valor": 15.9,
+      "timestamp": 1700008700,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 67,
+      "severidad": "PRECAUCION",
+      "valor": 14.3,
+      "timestamp": 1700009300,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 68,
+      "severidad": "CRITICO",
+      "valor": 15.7,
+      "timestamp": 1700010200,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 69,
+      "severidad": "CRITICO",
+      "valor": 16.0,
+      "timestamp": 1700010500,
+      "sensor": {
+        "id": "SEN_07",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "CONSUMO_KW"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    },
+    {
+      "_id": 70,
+      "severidad": "PRECAUCION",
+      "valor": 25.9,
+      "timestamp": 1696545200,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": null
+    },
+    {
+      "_id": 71,
+      "severidad": "CRITICO",
+      "valor": 31.5,
+      "timestamp": 1700099999,
+      "sensor": {
+        "id": "SEN_01",
+        "rack": "Rack_A1",
+        "pasillo": "Pasillo_Frio_1",
+        "tipo": "TEMPERATURA"
+      },
+      "incidencia": {
+        "estado": "ABIERTA",
+        "responsable": null
+      }
+    }
+  ]
+}

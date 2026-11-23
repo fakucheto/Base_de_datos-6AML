@@ -1,0 +1,167 @@
+
+==============================================================================
+CASO 7 - FASE E | Capturar y procesar telemetría de sensores de racks para prevenir fallos por sobrecalentamiento
+==============================================================================
+  problema: Capturar y procesar telemetría de sensores de racks para prevenir fallos por sobrecalentamiento
+  objetivo_medible: Alarma crítica en menos de 2 segundos
+  escala: 500 sensores, 1 lectura cada 5 s (~8,6 millones de registros por día)
+  retencion: 30 días caliente + 2 años histórico agregado
+  fuera_de_alcance: Control físico de los aires acondicionados (actuadores)
+[+] Entorno inicializado limpiamente.
+
+  [+] 228 lecturas de demostracion cargadas; los triggers generaron alarmas e incidencias.
+
+==============================================================================
+REGLAS DE NEGOCIO (triggers)
+==============================================================================
+  [RECHAZADO] RN1 timestamp -1 (fuera de rango)
+              -> RN1: timestamp fuera del rango UTC valido (2000-01-01 hasta manana)
+  [RECHAZADO] RN1 timestamp en el año 2099
+              -> RN1: timestamp fuera del rango UTC valido (2000-01-01 hasta manana)
+  [RECHAZADO] RN2 lectura de SEN_03 (en MANTENIMIENTO)
+              -> RN2: el sensor no esta ACTIVO (mantenimiento o inaccesible)
+  [ACEPTADO]  RN3 lectura de 31,5 sobre umbral 28 (debe quedar CRITICO)
+              nivel asignado automaticamente: CRITICO
+  [RECHAZADO] RN5 modificar una alarma
+              -> RN5: las alarmas son inmutables, no se pueden modificar
+  [RECHAZADO] RN5 borrar una alarma
+              -> RN5: las alarmas son inmutables, no se pueden borrar
+  [RECHAZADO] RN6 cerrar incidencia sin reconocerla
+              -> RN6: la incidencia debe RECONOCERSE antes de cerrarse
+  [RECHAZADO] RN6 reconocer sin responsable
+              -> RN6: reconocer una incidencia exige indicar un responsable
+  [ACEPTADO]  RN6 reconocer con responsable
+  [ACEPTADO]  RN6 cerrar incidencia reconocida
+  [RECHAZADO] RN6 reabrir incidencia cerrada
+              -> RN6: una incidencia CERRADA no puede reabrirse
+
+==============================================================================
+CONSULTAS
+==============================================================================
+
+  >> C1. Promedio horario de temperatura por pasillo (escenario normal 2)
+     pasillo=Pasillo_Frio_1 | hora_utc=2023-11-14 22:00:00 | temp_promedio=25.57 | lecturas=20
+     pasillo=Pasillo_Frio_1 | hora_utc=2023-11-14 23:00:00 | temp_promedio=25.4 | lecturas=24
+     pasillo=Pasillo_Frio_1 | hora_utc=2023-11-15 00:00:00 | temp_promedio=25.47 | lecturas=24
+     pasillo=Pasillo_Frio_1 | hora_utc=2023-11-15 01:00:00 | temp_promedio=25.7 | lecturas=4
+     pasillo=Pasillo_Frio_1 | hora_utc=2023-11-16 01:00:00 | temp_promedio=31.5 | lecturas=1
+     pasillo=SIN_PASILLO | hora_utc=2023-11-14 22:00:00 | temp_promedio=26.96 | lecturas=10
+     pasillo=SIN_PASILLO | hora_utc=2023-11-14 23:00:00 | temp_promedio=26.81 | lecturas=12
+     pasillo=SIN_PASILLO | hora_utc=2023-11-15 00:00:00 | temp_promedio=27.45 | lecturas=12
+
+  >> C2. Ultima lectura de cada sensor (funcion de ventana ROW_NUMBER)
+     id_sensor=SEN_01 | momento_utc=2023-11-16 01:59:59 | valor_metrica=31.5 | nivel_alerta=CRITICO
+     id_sensor=SEN_02 | momento_utc=2023-11-15 01:08:20 | valor_metrica=73.3 | nivel_alerta=PRECAUCION
+     id_sensor=SEN_04 | momento_utc=2023-11-15 01:08:20 | valor_metrica=26.5 | nivel_alerta=NORMAL
+     id_sensor=SEN_05 | momento_utc=2023-11-15 01:08:20 | valor_metrica=29.7 | nivel_alerta=PRECAUCION
+     id_sensor=SEN_06 | momento_utc=2023-11-15 01:08:20 | valor_metrica=9.8 | nivel_alerta=NORMAL
+     id_sensor=SEN_07 | momento_utc=2023-11-15 01:08:20 | valor_metrica=16.0 | nivel_alerta=CRITICO
+
+  >> C3. Top 3 sensores con mas alarmas CRITICAS
+     id_sensor=SEN_07 | rack_ubicacion=Rack_A1 | alarmas_criticas=8 | pico=16.0
+     id_sensor=SEN_04 | rack_ubicacion=Rack_Z9 | alarmas_criticas=5 | pico=31.0
+     id_sensor=SEN_01 | rack_ubicacion=Rack_A1 | alarmas_criticas=4 | pico=31.5
+
+  >> C4. Incidencias del NOC con su alarma (RF8)
+     id_incidencia=1 | estado=CERRADA | responsable=ing.noc.1 | id_sensor=SEN_01 | valor_metrica=28.1
+     id_incidencia=2 | estado=ABIERTA | responsable=- | id_sensor=SEN_01 | valor_metrica=28.7
+     id_incidencia=3 | estado=ABIERTA | responsable=- | id_sensor=SEN_01 | valor_metrica=28.8
+     id_incidencia=4 | estado=ABIERTA | responsable=- | id_sensor=SEN_04 | valor_metrica=30.3
+     id_incidencia=5 | estado=ABIERTA | responsable=- | id_sensor=SEN_04 | valor_metrica=30.2
+
+  >> C5. Vista de estabilidad termica por rack (RF9)
+     rack_ubicacion=Rack_A1 | pasillo=Pasillo_Frio_1 | temp_promedio=24.79 | temp_maxima=31.5 | pct_sobre_umbral=9.3
+     rack_ubicacion=Rack_A2 | pasillo=Pasillo_Frio_1 | temp_promedio=25.97 | temp_maxima=30.5 | pct_sobre_umbral=9.5
+     rack_ubicacion=Rack_Z9 | pasillo=SIN_PASILLO | temp_promedio=26.98 | temp_maxima=31.0 | pct_sobre_umbral=13.9
+
+  >> C6. Vista de consumo electrico por pasillo (base del reporte PUE)
+     pasillo=Pasillo_Frio_1 | kw_promedio=11.04 | kw_pico=16.0 | sensores=2
+
+==============================================================================
+RETENCION Y DOWNSAMPLING (30 dias caliente)
+==============================================================================
+  Lecturas antes: 229 | purgadas: 11 | despues: 218
+
+  >> Resumen horario conservado (historico agregado)
+     id_sensor=SEN_01 | hora_utc=2023-10-05 22:00:00 | promedio=24.18 | minimo=22.6 | maximo=25.9 | n_lecturas=6
+     id_sensor=SEN_05 | hora_utc=2023-10-05 22:00:00 | promedio=24.18 | minimo=22.2 | maximo=25.4 | n_lecturas=6
+
+==============================================================================
+NoSQL: almacen de DOCUMENTOS (estilo MongoDB)
+==============================================================================
+  Coleccion 'sensores': 7 documentos | 'alarmas': 71 documentos
+  Exportado a documentos_iot.json
+
+  Ejemplo de documento (sensor):
+  {
+    "_id": "SEN_01",
+    "tipo_metrica": "TEMPERATURA",
+    "umbral": 28.0,
+    "estado": "ACTIVO",
+    "ubicacion": {
+      "rack": "Rack_A1",
+      "pasillo": "Pasillo_Frio_1"
+    },
+    "ultimas_lecturas": [
+      {
+        "ts": 1700099999,
+        "valor": 31.5,
+        "nivel": "CRITICO"
+      },
+      {
+        "ts": 1700010500,
+        "valor": 25.4,
+        "nivel": "PRECAUCION"
+      },
+      {
+        "ts": 1700010200,
+        "valor": 24.0,
+        "nivel": "NORMAL"
+      }
+    ],
+    "estadisticas": {
+      "n": 38,
+      "promedio": 24.92,
+      "max": 31.5
+    }
+  }
+
+  >> Q1: sensores de TEMPERATURA del Pasillo_Frio_1 con maximo > 28
+     Mongo: db.sensores.find({tipo_metrica:'TEMPERATURA','ubicacion.pasillo':'Pasillo_Frio_1','estadisticas.max':{$gt:28}})
+     Resultado: ['SEN_01', 'SEN_05']
+
+  >> Q2: alarmas CRITICAS en Pasillo_Frio_1 o sin pasillo (sin ningun JOIN)
+     Mongo: db.alarmas.find({severidad:'CRITICO','sensor.pasillo':{$in:[...]}})
+     Resultado: [(4, 'SEN_01', 28.1), (11, 'SEN_01', 28.7), (17, 'SEN_01', 28.8), (24, 'SEN_04', 30.3), (27, 'SEN_04', 30.2), (28, 'SEN_04', 31.0)]
+
+==============================================================================
+GRAFOS: topologia del datacenter (networkx; equivalente en Neo4j/Cypher)
+==============================================================================
+  Nodos: 86 {'Datacenter': 1, 'Pasillo': 3, 'Rack': 4, 'Sensor': 7, 'Alarma': 71} | Aristas: 85
+
+  >> G1. Radio de impacto: si falla la refrigeracion de Pasillo_Frio_1, sensores afectados:
+     Cypher: MATCH (:Pasillo {nombre:'Pasillo_Frio_1'})-[:CONTIENE*]->(:Rack)-[:TIENE_SENSOR]->(s) RETURN s
+     ['SEN_01', 'SEN_02', 'SEN_03', 'SEN_05', 'SEN_06', 'SEN_07']
+
+  >> G2. Racks sin sensores (cobertura faltante):
+     ['Rack_C1']
+
+  >> G3. Alarmas por pasillo (recorrido de descendientes):
+      Pasillo_Caliente_2: 0 alarmas
+      Pasillo_Frio_1: 53 alarmas
+      SIN_PASILLO: 18 alarmas
+
+  >> G4. Trazabilidad de la alarma ALM_4 desde el datacenter:
+     DC_Principal -> Pasillo_Frio_1 -> Rack_A1 -> SEN_01 -> ALM_4
+
+  >> G5. Sensores en el pasillo SIN_PASILLO (inventario incompleto):
+     ['SEN_04']
+
+  Grafo exportado a grafo_datacenter.graphml (importable en Gephi o Neo4j)
+
+==============================================================================
+CONEXION ENTRE MOTORES: verificacion cruzada
+==============================================================================
+  Sensores -> SQL: 7 | Documentos: 7 | Grafo: 7
+  Alarmas  -> SQL: 71 | Documentos: 71 | Grafo: 71
+  [OK] Los tres almacenes son consistentes.
